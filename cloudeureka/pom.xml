@@ -9,13 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.zcs</groupId>
     <artifactId>cloud-eureka</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>1.5.9.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -45,5 +48,20 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
